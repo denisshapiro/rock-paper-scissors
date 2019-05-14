@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+    </head>
+
+    <body>
+        <script>
+            function computerPlay(){
+                let num = Math.floor((Math.random() * 3));
+
+                if (num == 1){
+                    return "rock";
+                }
+                else if(num == 2){
+                    return "paper";
+                }
+                else{
+                    return "scissors";
+                }
+            }
+
+            function playGame(playerSelection, computerSelection){
+                playerSelection = playerSelection.toLowerCase();
+
+                if (playerSelection == computerSelection){
+                    return "Draw!";
+                }
+                else if (playerSelection == "rock" && computerSelection == "paper"){
+                    return "You Lose! Paper beats Rock";
+                }
+                else if (playerSelection == "paper" && computerSelection == "rock"){
+                    return "You Win! Paper beats Rock";
+                }
+                else if (playerSelection == "scissors" && computerSelection == "paper"){
+                    return "You Win! Scissors beats Paper";
+                }
+                else if (playerSelection == "rock" && computerSelection == "scissors"){
+                    return "You Win! Rock beats Scissors";
+                }
+                else if (playerSelection == "paper" && computerSelection == "scissors"){
+                    return "You Lose! Scissors beats Paper";
+                }
+                else if (playerSelection == "scissors" && computerSelection == "rock"){
+                    return "You Lose! rock beats scissors";
+                }
+            }
+
+            function game(){
+                let computerScore = 0;
+                let playerScore = 0;
+                let result;
+
+                while(computerScore < 5 && playerScore < 5){
+                    let playerSelection = prompt("What is your Selection?");
+                    result = playGame(playerSelection, computerPlay());
+                    if (result.includes("You Lose!")){
+                        computerScore++;
+                    }
+                    else if (result.includes("You Win!")) {
+                        playerScore++;
+                    }
+                    console.log("player score is: " + playerScore);
+                    console.log("computer score is: " + computerScore);
+                }
+            }
+        </script>
+
+    </body>
+
+
+</html>
