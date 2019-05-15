@@ -5,6 +5,7 @@
     <head>
             <title>Rock Paper Scissors</title>
             <link href="./style.css" type="text/css" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
 
     <body>
@@ -12,7 +13,16 @@
             <input type="image"  id="rock" class = "game-button" src="images/rock.png"/>
             <input type="image"  id="paper" class = "game-button" src="images/paper.png"/>
             <input type="image"  id="scissors" class = "game-button" src="images/scissors.png"/>
+        </div> 
+
+    <div id = "wrapper">
+        <div class = display-scores>
+            <h1 id = "player-score" class = "scoreboard">Player Score: 0</h1>
+            <h1 id = "computer-score" class = "scoreboard">Computer Score: 0</h1>
+            <h1 id = "display-status" class = "scoreboard">STATUS</h1>
         </div>
+    <div>
+        <button id = "reset">NEW GAME</button>      
 
 
         <script src = "game.js"></script>
