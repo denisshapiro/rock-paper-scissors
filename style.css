@@ -1,0 +1,20 @@
+.game-button{
+    width: 20%;
+    height: 20%;
+    outline: none;
+}
+
+.game-button:hover{
+    transform: scale(1.1);
+}
+
+.game-button:active{
+    filter: grayscale(100%);
+}
+
+#play-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 200px;
+}
