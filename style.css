@@ -32,23 +32,22 @@
     border-radius: 30px;
 }
 
-#reset{
-    font-family: 'Roboto', sans-serif;
-}
-
 #display-status{
     font-family: 'Roboto', sans-serif;
 }
 #wrapper{
     text-align: center;
+    height: 220px;
 }
 
 .scoreboard{
     color: #5F6368;
+    font-family: 'Roboto', sans-serif;
 }
 
 #reset {
   position: relative;
+  font-family: 'Roboto', sans-serif;
   background-color: #4CAF50;
   border: none;
   border-radius: 30px;
@@ -63,7 +62,7 @@
   outline: none;
   width: 500px;
   height: 200px;
-  top: -203px;
+  top: -206px;
   visibility: hidden;
 }
 
@@ -89,4 +88,11 @@
   margin: 0;
   opacity: 1;
   transition: 0s
+}
+
+#lose-win{
+    text-align: center;
+    font-size: 80px;
+    top: -200px;
+    margin-top: 0px;
 }

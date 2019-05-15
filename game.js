@@ -3,6 +3,7 @@ const resetButton = document.getElementById("reset");
 let playerScoreDisplay = document.querySelector("#player-score");
 let computerScoreDisplay = document.querySelector("#computer-score");
 let status = document.querySelector("#display-status");
+let loseWin = document.querySelector("#lose-win");
 let playerScore = 0;
 let computerScore = 0;
 
@@ -23,6 +24,7 @@ resetButton.addEventListener('click', (e) =>{
     playerScoreDisplay.textContent = "Player Score: 0";
     computerScoreDisplay.textContent = "Computer Score: 0";
     status.textContent = "STATUS";
+    loseWin.textContent =  "";
 });
 
   function computerPlay(){
@@ -70,12 +72,12 @@ function playGame(playerSelection, computerSelection){
     update()
 
     if(playerScore == 5){
-        status.textContent =  "You Win!";
+        loseWin.textContent =  "YOU WIN!";
         disableButtons();
         document.getElementById("reset").style.visibility = "visible";
     }
     else if (computerScore == 5){
-        status.textContent =  "You Lose!";
+        loseWin.textContent =  "YOU LOSE!";
         disableButtons();
         document.getElementById("reset").style.visibility = "visible";
     }
@@ -97,5 +99,4 @@ function enableButtons(){
         button.disabled = false;
       });
 }
-
 
