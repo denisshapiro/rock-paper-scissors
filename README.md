@@ -1,1 +1,1 @@
-Rock Paper Scissors implementation using JavaScript 
+Rock Paper Scissors implementation with an interactive user interface using JavaScript and HTML/CSS
